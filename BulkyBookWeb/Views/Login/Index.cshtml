@@ -1,0 +1,30 @@
+﻿
+@model User
+@{
+    ViewData["Title"] = "Index";
+}
+<partial name="_Notification" />
+<form method="post">
+    <div class="border p-5 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Login</h2>
+        </div>
+        <div class="mb-4">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" required class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-4">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" required class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">
+            <i class="bi bi-box-arrow-in-right"></i>Login
+        </button>
+        <a asp-action="Create" class="btn btn-secondary" style="width:150px">Sign Up</a>
+    </div>
+
+</form>
+

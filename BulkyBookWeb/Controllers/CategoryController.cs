@@ -9,7 +9,7 @@ namespace BulkyBookWeb.Controllers
         private readonly ApplicationDbContext Db;
         public CategoryController(ApplicationDbContext db)
         {
-            this.Db = db;            
+            this.Db = db;
         }
         public IActionResult Index()
         {

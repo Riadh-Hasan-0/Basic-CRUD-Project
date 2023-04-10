@@ -2,16 +2,17 @@
 
 namespace BulkyBookWeb.Models
 {
-    public class Category
+    public class User
     {
         [Key]
         public int Id { get; set; }
         [Required]
-       
         public string Name { get; set; }
-        [Range(1, 100)]
-        
-        public int DisplayOrder { get; set; }
+        [Required]
+        public string Email { get; set; }
+        [Required]
+        public string Password { get; set; }
+        public string Phone { get; set; }
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
 
     }
